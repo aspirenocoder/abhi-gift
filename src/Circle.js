@@ -147,16 +147,6 @@ const Circle = () => {
     { name: "Preetham" },
   ];
 
-  const saveArrayToCookies = (array) => {
-    Cookies.set("arrayData", JSON.stringify(array));
-  };
-
-  const addItemToArray = (item) => {
-    const newArray = [...arrayData, item];
-    setArrayData(newArray);
-    saveArrayToCookies(newArray);
-  };
-
   const rotateCircle = () => {
     if (highlightedDot === null) {
       if (audioRef.current) {
@@ -171,6 +161,16 @@ const Circle = () => {
 
   useEffect(() => {
     // rotateCircle();
+
+    const saveArrayToCookies = (array) => {
+      Cookies.set("arrayData", JSON.stringify(array));
+    };
+
+    const addItemToArray = (item) => {
+      const newArray = [...arrayData, item];
+      setArrayData(newArray);
+      saveArrayToCookies(newArray);
+    };
 
     const cookieArray = Cookies.get("arrayData");
     if (cookieArray) {

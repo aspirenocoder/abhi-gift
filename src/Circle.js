@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState, useCallback } from "react";
 import "./Circle.css";
 import useWindowSize from "react-use/lib/useWindowSize";
 import Confetti from "react-confetti";
@@ -151,11 +151,14 @@ const Circle = () => {
     Cookies.set("arrayData", JSON.stringify(array));
   };
 
-  const addItemToArray = (item) => {
-    const newArray = [...arrayData, item];
-    setArrayData(newArray);
-    saveArrayToCookies(newArray);
-  };
+  const addItemToArray = useCallback(
+    (item) => {
+      const newArray = [...arrayData, item];
+      setArrayData(newArray);
+      saveArrayToCookies(newArray);
+    },
+    [arrayData]
+  );
 
   const rotateCircle = () => {
     if (highlightedDot === null) {

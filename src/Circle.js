@@ -222,7 +222,7 @@ const Circle = () => {
         circle.removeEventListener("animationend", handleAnimationEnd);
       }
     };
-  }, [addItemToArray, pageIndex, arrayData]);
+  }, [pageIndex, arrayData]);
 
   for (let i = 0; i < numDots; i++) {
     const angle = (i / numDots) * 360;

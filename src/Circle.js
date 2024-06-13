@@ -25,8 +25,6 @@ const Circle = () => {
   const [pageIndex, setPageIndex] = useState(0);
   const [showConfetti, setShowConfetti] = useState(false);
 
-  const [arrayData, setArrayData] = useState([]);
-
   const { cWidth, cHeight } = useWindowSize();
 
   const data = [
@@ -160,9 +158,12 @@ const Circle = () => {
   };
 
   useEffect(() => {
+    let arrayData = [];
+
     const addItemToArray = async (item) => {
       const newArray = [...arrayData, item];
-      setArrayData(newArray);
+      arrayData = newArray;
+      // setArrayData(newArray);
       await Cookies.set("arrayData", JSON.stringify(newArray));
     };
     // rotateCircle();
@@ -170,7 +171,14 @@ const Circle = () => {
       const cookieArray = await Cookies.get("arrayData");
       if (cookieArray) {
         let temp = JSON.parse(cookieArray);
-        setArrayData(temp);
+        if (temp.length === 120) {
+          let emptyData = [];
+          await Cookies.set("arrayData", JSON.stringify(emptyData));
+        } else {
+          arrayData = temp;
+        }
+        // setArrayData(temp);
+        alert(arrayData);
       }
     };
 

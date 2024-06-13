@@ -147,12 +147,6 @@ const Circle = () => {
     { name: "Preetham" },
   ];
 
-  const addItemToArray = async (item) => {
-    const newArray = [...arrayData, item];
-    setArrayData(newArray);
-    await Cookies.set("arrayData", JSON.stringify(newArray));
-  };
-
   const rotateCircle = () => {
     if (highlightedDot === null) {
       if (audioRef.current) {
@@ -166,6 +160,11 @@ const Circle = () => {
   };
 
   useEffect(() => {
+    const addItemToArray = async (item) => {
+      const newArray = [...arrayData, item];
+      setArrayData(newArray);
+      await Cookies.set("arrayData", JSON.stringify(newArray));
+    };
     // rotateCircle();
     const getCookieData = async () => {
       const cookieArray = await Cookies.get("arrayData");

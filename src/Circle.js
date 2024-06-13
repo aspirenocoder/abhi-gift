@@ -13,7 +13,7 @@ const Circle = () => {
   const dots = [];
   const numDots = 100;
   const dotSize = 3; // Size of the dot
-  const imageSize = 35;
+  // const imageSize = 35;
   const [highlightedDot, setHighlightedDot] = useState(null);
   const circleRef = useRef(null);
   const audioRef = useRef(null);

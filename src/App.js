@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Circle from "./Circle";
 
-function App() {
+import useWindowSize from "react-use/lib/useWindowSize";
+import Confetti from "react-confetti";
+
+const App = () => {
+  const { cWidth, cHeight } = useWindowSize();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div
+      className="App"
+      style={{ backgroundColor: "rgb(22, 21, 21)", color: "#fff" }}
+    >
+      {/* <Confetti width={cWidth} height={cHeight} tweenDuration={5000} /> */}
+
+      <Circle />
     </div>
   );
-}
+};
 
 export default App;

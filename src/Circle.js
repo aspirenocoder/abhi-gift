@@ -147,18 +147,11 @@ const Circle = () => {
     { name: "Preetham" },
   ];
 
-  const saveArrayToCookies = (array) => {
-    Cookies.set("arrayData", JSON.stringify(array));
+  const addItemToArray = async (item) => {
+    const newArray = [...arrayData, item];
+    setArrayData(newArray);
+    await Cookies.set("arrayData", JSON.stringify(newArray));
   };
-
-  const addItemToArray = useCallback(
-    (item) => {
-      const newArray = [...arrayData, item];
-      setArrayData(newArray);
-      saveArrayToCookies(newArray);
-    },
-    [arrayData]
-  );
 
   const rotateCircle = () => {
     if (highlightedDot === null) {
@@ -172,10 +165,10 @@ const Circle = () => {
     }
   };
 
-  useEffect(() => {
+  useEffect(async () => {
     // rotateCircle();
 
-    const cookieArray = Cookies.get("arrayData");
+    const cookieArray = await Cookies.get("arrayData");
     if (cookieArray) {
       let temp = JSON.parse(cookieArray);
       setArrayData(temp);

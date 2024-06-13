@@ -224,11 +224,11 @@ const Circle = () => {
         circle.removeEventListener("animationend", handleAnimationEnd);
       }
     };
-  }, [pageIndex]);
+  }, [pageIndex, addItemToArray, arrayData]);
 
   for (let i = 0; i < numDots; i++) {
     const angle = (i / numDots) * 360;
-    const isHighlighted = i === highlightedDot;
+    // const isHighlighted = i === highlightedDot;
     const translateX = `calc(50px + ${dotSize / 2}px)`;
     dots.push(
       <div
@@ -359,7 +359,7 @@ const Circle = () => {
               {dots}
               <img
                 className="center-image"
-                alt="abiram photo"
+                alt="abiram"
                 src={require("./assets/abi.png")}
                 style={{
                   width: "197px",
@@ -419,7 +419,7 @@ const Circle = () => {
         {pageIndex === 1 && (
           <div className="flipped-div">
             <img
-              alt="profile image"
+              alt="profile"
               style={{ width: "150px", height: "150px", borderRadius: "30px" }}
               src="https://www.w3schools.com/tags/img_girl.jpg"
             />

@@ -1,7 +1,7 @@
 import React from "react";
 import Circle from "./Circle";
 
-import useWindowSize from "react-use/lib/useWindowSize";
+// import useWindowSize from "react-use/lib/useWindowSize";
 // import Confetti from "react-confetti";
 
 const App = () => {

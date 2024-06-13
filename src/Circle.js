@@ -8,12 +8,15 @@ import Audio2 from "./assets/audio2.mp3";
 import Audio3 from "./assets/audio3.mp3";
 import Audio4 from "./assets/audio4.mp3";
 import Cookies from "js-cookie";
+import HeartGIF from "./assets/heart.gif";
+import HeartPNG from "./assets/heart.png";
 
 const Circle = () => {
   const dots = [];
   const numDots = 100;
   const dotSize = 3; // Size of the dot
   // const imageSize = 35;
+  const [clickedHeart, setClickedHeart] = useState(HeartPNG);
   const [highlightedDot, setHighlightedDot] = useState(null);
   const circleRef = useRef(null);
   const audioRef = useRef(null);
@@ -444,23 +447,44 @@ const Circle = () => {
         )}
         {pageIndex === 2 && (
           <div className="metaphor-div">
-            <h1> Metaphor</h1>
+            <h1 style={{ textAlign: "center" }}> Metaphor</h1>
             <div
               style={{
                 display: "flex",
-                justifyContent: "center",
+                width: "60vw",
                 alignItems: "center",
-                backgroundColor: "rgba(255,255,255,0.5)",
-                borderRadius: "16px",
-              }}
-              onClick={() => {
-                setHighlightedDot(null);
-                setPageIndex(0);
-                setSelectArrow(0);
-                circleRef.current = null;
+                justifyContent: "space-evenly",
               }}
             >
-              <p>Start again</p>
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  backgroundColor: "rgba(255,255,255,0.5)",
+                  borderRadius: "16px",
+                  width: "100px",
+                }}
+                onClick={() => {
+                  setHighlightedDot(null);
+                  setPageIndex(0);
+                  setSelectArrow(0);
+                  setClickedHeart(HeartPNG);
+                  circleRef.current = null;
+                }}
+              >
+                <p>Start again</p>
+              </div>
+              <img
+                style={{ width: "40px", height: "40px" }}
+                src={clickedHeart}
+                alt="heart reaction"
+                onClick={() => {
+                  setTimeout(() => {
+                    setClickedHeart(HeartGIF);
+                  }, 300);
+                }}
+              />
             </div>
           </div>
         )}

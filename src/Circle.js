@@ -178,7 +178,6 @@ const Circle = () => {
           arrayData = temp;
         }
         // setArrayData(temp);
-        alert(arrayData);
       }
     };
 

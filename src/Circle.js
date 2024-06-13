@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState, useCallback } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./Circle.css";
 import useWindowSize from "react-use/lib/useWindowSize";
 import Confetti from "react-confetti";
@@ -165,14 +165,17 @@ const Circle = () => {
     }
   };
 
-  useEffect(async () => {
+  useEffect(() => {
     // rotateCircle();
+    const getCookieData = async () => {
+      const cookieArray = await Cookies.get("arrayData");
+      if (cookieArray) {
+        let temp = JSON.parse(cookieArray);
+        setArrayData(temp);
+      }
+    };
 
-    const cookieArray = await Cookies.get("arrayData");
-    if (cookieArray) {
-      let temp = JSON.parse(cookieArray);
-      setArrayData(temp);
-    }
+    getCookieData();
 
     const arrowNumber = Math.floor(Math.random() * 4) + 1;
     setTimeout(() => {

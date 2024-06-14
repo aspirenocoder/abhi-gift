@@ -13,7 +13,7 @@ import HeartPNG from "./assets/heart.png";
 
 const Circle = () => {
   const dots = [];
-  const numDots = 100;
+  const numDots = 50;
   const dotSize = 3; // Size of the dot
   // const imageSize = 35;
   const audioFiles = [Audio1, Audio2, Audio3, Audio4];
@@ -33,121 +33,327 @@ const Circle = () => {
   const { cWidth, cHeight } = useWindowSize();
 
   const data = [
-    { name: "Rats" },
-    { name: "KP" },
-    { name: "Varnisha" },
-    { name: "Hiresh" },
-    { name: "Sandip" },
-    { name: "Avinash" },
-    { name: "Joshwa" },
-    { name: "Varadha" },
-    { name: "Nini" },
-    { name: "Joel" },
-    { name: "Rinsha" },
-    { name: "Madchef" },
-    { name: "Kenny" },
-    { name: "Madhur" },
-    { name: "Vignesh" },
-    { name: "Saru" },
-    { name: "Amritha" },
-    { name: "Tanmay" },
-    { name: "Nickendra" },
-    { name: "Gaurav" },
-    { name: "Rahul" },
-    { name: "Rahul" },
-    { name: "Nazia" },
-    { name: "Anjali" },
-    { name: "Mukesh" },
-    { name: "Asha" },
-    { name: "Bhuvana Akka" },
-    { name: "Ranjith" },
-    { name: "Madhan" },
-    { name: "Aishwariya" },
-    { name: "Danish" },
-    { name: "Aakif" },
-    { name: "Nithish" },
-    { name: "Vipin" },
-    { name: "Sid" },
-    { name: "Jameer" },
-    { name: "Farook" },
-    { name: "Kayal" },
-    { name: "Bhisham" },
-    { name: "Sanath" },
-    { name: "Sharadha akka" },
-    { name: "Harish" },
-    { name: "Nitish" },
-    { name: "Hurshitha" },
-    { name: "Ramesh" },
-    { name: "Akshaya" },
-    { name: "Aashik" },
-    { name: "Abbas" },
-    { name: "Nithin" },
-    { name: "Sudharshan" },
-    { name: "Lokesh" },
-    { name: "Thiyagu" },
-    { name: "Madhu Menon" },
-    { name: "Shakthi anna" },
-    { name: "Chandru" },
-    { name: "Jignesh" },
-    { name: "Hari" },
-    { name: "Jothi" },
-    { name: "Aishwariya" },
-    { name: "Shruti" },
-    { name: "Arun Subbaiah" },
-    { name: "Hari Krshnan" },
-    { name: "Bhara" },
-    { name: "Nivetha" },
-    { name: "Shakthi" },
-    { name: "Vetri" },
-    { name: "Ashwin" },
-    { name: "Suvika" },
-    { name: "Kevin" },
-    { name: "Hari" },
-    { name: "Hari" },
-    { name: "Santhosh" },
-    { name: "Tilak" },
-    { name: "Nafees" },
-    { name: "Chandru" },
-    { name: "Neera Kabilan" },
-    { name: "Shakti" },
-    { name: "Sai" },
-    { name: "Harsh" },
-    { name: "Kavya" },
-    { name: "Mithra" },
-    { name: "Vilasini" },
-    { name: "Koushik" },
-    { name: "Jigar" },
-    { name: "Teja" },
-    { name: "Nicky" },
-    { name: "Shyam" },
-    { name: "Shakthi" },
-    { name: "Pankaj" },
-    { name: "Alfred" },
-    { name: "Bala" },
-    { name: "Edwin" },
-    { name: "Bhavesh" },
-    { name: "Rohit" },
-    { name: "Vaishnavi" },
-    { name: "Neil Smith" },
-    { name: "Tarun" },
-    { name: "Karthic" },
-    { name: "Karthik" },
-    { name: "Mehul" },
-    { name: "AB" },
-    { name: "Sanjeev Propal" },
-    { name: "Monce" },
-    { name: "Rithwin" },
-    { name: "Kritish" },
-    { name: "Dhivya Mam" },
-    { name: "Janani" },
-    { name: "Ayaz" },
-    { name: "Mrinalini" },
-    { name: "Sarath" },
-    { name: "Deep" },
-    { name: "John" },
-    { name: "Fahad" },
-    { name: "Ramesh" },
-    { name: "Preetham" },
+    {
+      name: "Aakif",
+      image_url:
+        "https://postactionsbucket.s3.ap-south-1.amazonaws.com/abhiram-dolabs/Aakif.jpeg",
+      metaphor:
+        "Abhiram was like the Wi-Fi signal in a busy cafe: occasionally strong, frequently intermittent, but always forcing us to find creative ways to get things done.",
+    },
+    {
+      name: "Aashik",
+      image_url:
+        "https://postactionsbucket.s3.ap-south-1.amazonaws.com/abhiram-dolabs/Aashik.jpg",
+      metaphor: "Abhiram is NOKIA, always connecting us with the right people.",
+    },
+    {
+      name: "Akshaya",
+      image_url:
+        "https://postactionsbucket.s3.ap-south-1.amazonaws.com/abhiram-dolabs/Akshaya.jpeg",
+      metaphor:
+        "Abhiram to me is a LinkedIn. He paved the way for me into the world of freelancing and I'll always be grateful for that!",
+    },
+    {
+      name: "Asha",
+      image_url:
+        "https://postactionsbucket.s3.ap-south-1.amazonaws.com/abhiram-dolabs/Asha.jpeg",
+      metaphor: "Abhi was a gentle sunbeam filling space with warmth",
+    },
+    {
+      name: "Ayaz",
+      image_url:
+        "https://postactionsbucket.s3.ap-south-1.amazonaws.com/abhiram-dolabs/Ayaz+AHmed.png",
+      metaphor:
+        "Abhiram is a treasure, a very humble person with lots of knowledge.",
+    },
+    {
+      name: "Bala",
+      image_url:
+        "https://postactionsbucket.s3.ap-south-1.amazonaws.com/abhiram-dolabs/Bala+(2).jpeg",
+      metaphor:
+        "You taught me that by adding value, we create a ripple effect, like a stone thrown into a pond, touching countless lives in ways we can't even see.",
+    },
+    {
+      name: "Bhara",
+      image_url:
+        "https://postactionsbucket.s3.ap-south-1.amazonaws.com/abhiram-dolabs/Barra.jpeg",
+      metaphor:
+        '"Book - people can get more information and content. Only he knows where you get offers you and how you can claim it. Senthil in Boys Movie - Information is wealth"',
+    },
+    {
+      name: "Bhuvana Akka",
+      image_url:
+        "https://postactionsbucket.s3.ap-south-1.amazonaws.com/abhiram-dolabs/Bhuvana.jpeg",
+      metaphor:
+        "Abhiram is like google maps, always happy to show ways to any Tom, Dick and Harry to reach their destinations.",
+    },
+    {
+      name: "Chandru",
+      image_url:
+        "https://postactionsbucket.s3.ap-south-1.amazonaws.com/abhiram-dolabs/Chandru+Airdonex.jpeg",
+      metaphor:
+        "Abhiram was like a lighthouse, illuminating our path even in the darkest storms",
+    },
+    {
+      name: "Danish",
+      image_url:
+        "https://postactionsbucket.s3.ap-south-1.amazonaws.com/abhiram-dolabs/Danish+Khan.jpg",
+      metaphor:
+        "Abhiram the Changemaker, with a mentor's embrace, empowered my skills beyond this workplace.",
+    },
+    {
+      name: "Farook",
+      image_url:
+        "https://postactionsbucket.s3.ap-south-1.amazonaws.com/abhiram-dolabs/Farook.jpg",
+      metaphor: "Abhiram is a Google he know something about everything",
+    },
+    {
+      name: "Hari Prasad",
+      image_url:
+        "https://postactionsbucket.s3.ap-south-1.amazonaws.com/abhiram-dolabs/Hari+Prasaad.jpg",
+      metaphor:
+        "Abhiram has been like a shock-absorber, I can come to him with any problem and he'd understand the depth of it, take the stress away and frame a solution.",
+    },
+    {
+      name: "Harish",
+      image_url:
+        "https://postactionsbucket.s3.ap-south-1.amazonaws.com/abhiram-dolabs/Harish+Venkatesh.png",
+      metaphor:
+        "Lion in Cat - Abhiram was the big lion hidden in a tiny cat that enabled me to not be judgemental toward anyone/thing.",
+    },
+    {
+      name: "Harsh",
+      image_url:
+        "https://postactionsbucket.s3.ap-south-1.amazonaws.com/abhiram-dolabs/Harsh+Jethani.jpg",
+      metaphor:
+        "Abhiram opened the door to entrepreneurship for me, guiding me through the maze of what it will look like when I embark on my own journey.",
+    },
+    {
+      name: "Hurshitha",
+      image_url:
+        "https://postactionsbucket.s3.ap-south-1.amazonaws.com/abhiram-dolabs/Hurshitha.jpg",
+      metaphor:
+        "\"100 year old Banyan tree trunk\" so effing strong support system And keeps giving love support advise without any expectations. My cute little brother from another mother. He's more than just a colleague. He's my one and only Namitha 🫶",
+    },
+    {
+      name: "Joel",
+      image_url:
+        "https://postactionsbucket.s3.ap-south-1.amazonaws.com/abhiram-dolabs/Joel.jpg",
+      metaphor: "Abhiram was my navigator, navigating my path to success.",
+    },
+    {
+      name: "Joshwa",
+      image_url:
+        "https://postactionsbucket.s3.ap-south-1.amazonaws.com/abhiram-dolabs/Joshwa_.jpg",
+      metaphor:
+        "He has been to me what Nikumbh was to Ishaan—helping me to identify my strengths, discover my dreams, and find my ikigai. I owe him a debt that can never truly be repaid.",
+    },
+    {
+      name: "Karthic",
+      image_url:
+        "https://postactionsbucket.s3.ap-south-1.amazonaws.com/abhiram-dolabs/Karthic+OOTB.jpg",
+      metaphor: "Abhiram is the promise of hope waiting at the tunnel's end.",
+    },
+    {
+      name: "Kenny",
+      image_url:
+        "https://postactionsbucket.s3.ap-south-1.amazonaws.com/abhiram-dolabs/Kenny.jpeg",
+      metaphor:
+        "Abhiram is an “Energy” who gives us more confidence and power to do what we want to do.",
+    },
+    {
+      name: "KP",
+      image_url:
+        "https://postactionsbucket.s3.ap-south-1.amazonaws.com/abhiram-dolabs/KP.jpeg",
+      metaphor:
+        "Abhiram has been like a clear mirror, providing a reality check and even more, reflecting back what we missed seeing.",
+    },
+    {
+      name: "Lokesh",
+      image_url:
+        "https://postactionsbucket.s3.ap-south-1.amazonaws.com/abhiram-dolabs/Lokesh.jpeg",
+      metaphor:
+        "Abhiram is a Ladder or an Elevator, lifting us up to achievie our goals.",
+    },
+    {
+      name: "Madchef",
+      image_url:
+        "https://postactionsbucket.s3.ap-south-1.amazonaws.com/abhiram-dolabs/Madchef+Koushik.jpg",
+      metaphor:
+        "Abhiram brought the essential flavour to my business strategies",
+    },
+    {
+      name: "Madhan",
+      image_url:
+        "https://postactionsbucket.s3.ap-south-1.amazonaws.com/abhiram-dolabs/Madhan.jpeg",
+      metaphor:
+        "He was like a gentle nudges, who kept me on the right path when I started to stray.",
+    },
+    {
+      name: "Madhu Menon",
+      image_url:
+        "https://postactionsbucket.s3.ap-south-1.amazonaws.com/abhiram-dolabs/Madhu+menon+SimplyAdda.png",
+      metaphor:
+        "Abhiram has been a Crystal, bringing clarity and structure to thoughts and perspectives",
+    },
+    {
+      name: "Mithra",
+      image_url:
+        "https://postactionsbucket.s3.ap-south-1.amazonaws.com/abhiram-dolabs/Mithra.jpg",
+      metaphor:
+        "Abhiram is a wild card, he surprises everyone with his innovative ideas.",
+    },
+    {
+      name: "Monce",
+      image_url:
+        "https://postactionsbucket.s3.ap-south-1.amazonaws.com/abhiram-dolabs/Monce.jpg",
+      metaphor:
+        "Abhiram was like my mapmaker, charting my course through the uncharted territory of my own potential.",
+    },
+    {
+      name: "Mrinalini",
+      image_url:
+        "https://postactionsbucket.s3.ap-south-1.amazonaws.com/abhiram-dolabs/Mrinalini.PNG",
+      metaphor:
+        "You have been my guiding star, illuminating the path and helping me navigate through the complexities of business decisions.",
+    },
+    {
+      name: "Nazia",
+      image_url:
+        "https://postactionsbucket.s3.ap-south-1.amazonaws.com/abhiram-dolabs/Nazia.jpeg",
+      metaphor:
+        "He was a steadfast guardian, a guiding light in my moments of solitude.",
+    },
+    {
+      name: "Nini",
+      image_url:
+        "https://postactionsbucket.s3.ap-south-1.amazonaws.com/abhiram-dolabs/Nini.HEIC",
+      metaphor:
+        "Abhi was the magnet that attracted chicks, drama and chaos; nonetheless, he’s amazing (for all the wrong reasons)",
+    },
+    {
+      name: "Nithin",
+      image_url:
+        "https://postactionsbucket.s3.ap-south-1.amazonaws.com/abhiram-dolabs/Nithin.jpeg",
+      metaphor:
+        "Abhiram, you're like a sunflower - standing tall and unwavering, spreading warmth and cheer. As you move on to new adventures, know that your impact here will always be cherished. Thank you for being a constant source of motivation and joy.",
+    },
+    {
+      name: "Nithish",
+      image_url:
+        "https://postactionsbucket.s3.ap-south-1.amazonaws.com/abhiram-dolabs/Nithis+-+DoLabs.jpg",
+      metaphor:
+        "Abhi, our creative compass, led us to new peaks. As he takes a bow, his melody of mentorship will continue to inspire us.",
+    },
+    {
+      name: "Nivetha",
+      image_url:
+        "https://postactionsbucket.s3.ap-south-1.amazonaws.com/abhiram-dolabs/Nivetha+(unlimited).jpeg",
+      metaphor:
+        '"He is the pole star directed me in the right away, He is a pillar have been a support system being there for me anytime I called him Zomato bought and treated me with a lot food Bridge - I\'m here because of him."',
+    },
+    {
+      name: "Preetham",
+      image_url:
+        "https://postactionsbucket.s3.ap-south-1.amazonaws.com/abhiram-dolabs/Preetham+Kumaran+silks.PNG",
+      metaphor:
+        '"Abhi guided us truly as how compass would do to a captain of a ship mid ocean."',
+    },
+    {
+      name: "Ramesh",
+      image_url:
+        "https://postactionsbucket.s3.ap-south-1.amazonaws.com/abhiram-dolabs/Ramesh+P%26M.jpg",
+      metaphor: '"he is as straight as a line always gives true feedback"',
+    },
+    {
+      name: "Rats",
+      image_url:
+        "https://postactionsbucket.s3.ap-south-1.amazonaws.com/abhiram-dolabs/Rats.jpeg",
+      metaphor:
+        "He is a Big Friendly Giant (BFG) waiting to awaken from within.",
+    },
+    {
+      name: "Rinsha",
+      image_url:
+        "https://postactionsbucket.s3.ap-south-1.amazonaws.com/abhiram-dolabs/Rinsha.jpg",
+      metaphor:
+        "Abhiram is the Swiss Army knife of my life, seamlessly transforming into whatever I need at every turn. Like a lighthouse, he guides me through the stormiest seas and the sunniest shores alike",
+    },
+    {
+      name: "Sai",
+      image_url:
+        "https://postactionsbucket.s3.ap-south-1.amazonaws.com/abhiram-dolabs/sai+.jpg",
+      metaphor:
+        "having a best friend who always brings the perfect snack to the party – comforting, uplifting, and making everything better.",
+    },
+    {
+      name: "Sanath",
+      image_url:
+        "https://postactionsbucket.s3.ap-south-1.amazonaws.com/abhiram-dolabs/Sanath.jpg",
+      metaphor:
+        "Abhiram was like the bright spot in our interactions, always bringing his chill vibe and strong voice to the table.",
+    },
+    {
+      name: "Santhosh",
+      image_url:
+        "https://postactionsbucket.s3.ap-south-1.amazonaws.com/abhiram-dolabs/Santhosh+Eatitude.jpg",
+      metaphor:
+        "Abhiram was the spark plug of my entrepreneurial engine, firing up my drive and ambitions to where it is right now!",
+    },
+    {
+      name: "Shakthi anna",
+      image_url:
+        "https://postactionsbucket.s3.ap-south-1.amazonaws.com/abhiram-dolabs/sakthi.jpeg",
+      metaphor: "Divine Vessel - His care if never ending.",
+    },
+    {
+      name: "Sharadha akka",
+      image_url:
+        "https://postactionsbucket.s3.ap-south-1.amazonaws.com/abhiram-dolabs/Sharadda+(Nini+Neighbour).jpeg",
+      metaphor:
+        "Abhi is to me as integration is to calculus, expertly breaking down any complex thoughts and ideas I come up with.",
+    },
+    {
+      name: "Sid",
+      image_url:
+        "https://postactionsbucket.s3.ap-south-1.amazonaws.com/abhiram-dolabs/Siddharth+Pencil+%26+Monk.jpg",
+      metaphor:
+        "He’s been an arrow or a missile or a bullet. Tell him the target and he’ll get it done",
+    },
+    {
+      name: "Sudharshan",
+      image_url:
+        "https://postactionsbucket.s3.ap-south-1.amazonaws.com/abhiram-dolabs/Sudharshan+Bversity.JPG",
+      metaphor:
+        "Friendly neighbourhood leader. Abhiram is a go-to friend for any needs at workspace",
+    },
+    {
+      name: "Suvika",
+      image_url:
+        "https://postactionsbucket.s3.ap-south-1.amazonaws.com/abhiram-dolabs/Suvika.jpeg",
+      metaphor:
+        "Abhiram was like the ghee in dosa, adding that extra crispiness to my career",
+    },
+    {
+      name: "Swathi",
+      image_url:
+        "https://postactionsbucket.s3.ap-south-1.amazonaws.com/abhiram-dolabs/Swathi.jpeg",
+      metaphor:
+        "Thank you for being the guiding light in my startup's early journey, sharing invaluable contacts, and charting a roadmap for success. Your dedication and support have been instrumental. Best wishes on your next adventure!",
+    },
+    {
+      name: "Thiyagu",
+      image_url:
+        "https://postactionsbucket.s3.ap-south-1.amazonaws.com/abhiram-dolabs/Thiyagu.jpeg",
+      metaphor: "He is a keystone that addresses the core problem",
+    },
+    {
+      name: "Varnisha",
+      image_url:
+        "https://postactionsbucket.s3.ap-south-1.amazonaws.com/abhiram-dolabs/Varnisha.jpeg",
+      metaphor:
+        "Tony Stark to my Peter Parker. Mentored me and allowed me to explore with a lot of freedom.",
+    },
   ];
 
   const rotateCircle = () => {
@@ -287,6 +493,7 @@ const Circle = () => {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
+        flexDirection: "column",
         height: "95vh",
         width: "100vw",
       }}
@@ -299,10 +506,13 @@ const Circle = () => {
         />
       )}
 
+      <p style={{ fontSize: "30px" }}>A note to our darling!</p>
+
       <div
         style={{
           borderRadius: "20px",
           height: `${highlightedDot !== null ? "70vh" : "60vh"}`,
+          marginBottom: "80px",
         }}
         className={`circle-container  ${pageIndex === 1 ? "flipped" : ""} ${
           pageIndex === 2 ? "metaphor" : ""
@@ -323,7 +533,7 @@ const Circle = () => {
               }}
             >
               {selectArrow === 1 && (
-                <audio ref={audioRef} src={getRandomAudio()} />
+                <audio preload="auto" ref={audioRef} src={getRandomAudio()} />
               )}
               {selectArrow === 1 && (
                 <img
@@ -342,7 +552,7 @@ const Circle = () => {
                 />
               )}
               {selectArrow === 2 && (
-                <audio ref={audioRef} src={getRandomAudio()} />
+                <audio preload="auto" ref={audioRef} src={getRandomAudio()} />
               )}
 
               {selectArrow === 2 && <div />}
@@ -396,7 +606,7 @@ const Circle = () => {
               }}
             >
               {selectArrow === 3 && (
-                <audio ref={audioRef} src={getRandomAudio()} />
+                <audio preload="auto" ref={audioRef} src={getRandomAudio()} />
               )}
 
               {selectArrow === 3 && (
@@ -409,7 +619,7 @@ const Circle = () => {
               )}
 
               {selectArrow === 4 && (
-                <audio ref={audioRef} src={getRandomAudio()} />
+                <audio preload="auto" ref={audioRef} src={getRandomAudio()} />
               )}
 
               {selectArrow === 4 && <div />}
@@ -428,7 +638,7 @@ const Circle = () => {
               <div>
                 <p className="selected-number">{highlightedDot}</p>
                 <p className="proceed-button" onClick={() => setPageIndex(1)}>
-                  Proceed
+                  Click to View
                 </p>
               </div>
             )}
@@ -439,7 +649,7 @@ const Circle = () => {
             <img
               alt="profile"
               style={{ width: "150px", height: "150px", borderRadius: "30px" }}
-              src="https://www.w3schools.com/tags/img_girl.jpg"
+              src={data[highlightedDot].image_url}
             />
             <p
               style={{
@@ -459,17 +669,15 @@ const Circle = () => {
               }}
               onClick={() => setPageIndex(2)}
             >
-              <p>Show metaphor</p>
+              <p>Flip</p>
             </div>
           </div>
         )}
         {pageIndex === 2 && (
           <div className="metaphor-div">
-            <h1 style={{ textAlign: "center" }}> Metaphor</h1>
+            <h1 style={{ textAlign: "center" }}> From my heart</h1>
             <blockquote>
-              <p>
-                Abhiram created major impact in my life to grow in exponential
-              </p>
+              <p>{data[highlightedDot].metaphor}</p>
             </blockquote>
             <p
               style={{
@@ -479,7 +687,7 @@ const Circle = () => {
                 top: "-20px",
               }}
             >
-              -- Asha
+              -- {data[highlightedDot].name}
             </p>
             <div
               style={{
@@ -497,6 +705,9 @@ const Circle = () => {
                   backgroundColor: "rgba(255,255,255,0.5)",
                   borderRadius: "16px",
                   width: "100px",
+                  position: "relative",
+                  top: "-30px",
+                  left: "-20px",
                 }}
                 onClick={() => {
                   setHighlightedDot(null);
@@ -509,13 +720,19 @@ const Circle = () => {
                 <p>Start again</p>
               </div>
               <img
-                style={{ width: "40px", height: "40px" }}
+                style={{
+                  width: "40px",
+                  height: "40px",
+                  position: "relative",
+                  top: "-30px",
+                  left: "10px",
+                }}
                 src={clickedHeart}
                 alt="heart reaction"
                 onClick={() => {
                   setTimeout(() => {
                     setClickedHeart(HeartGIF);
-                  }, 300);
+                  }, 100);
                 }}
               />
             </div>

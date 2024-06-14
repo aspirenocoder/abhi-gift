@@ -537,7 +537,12 @@ const Circle = () => {
               }}
             >
               {selectArrow === 1 && (
-                <audio preload="auto" ref={audioRef} src={getRandomAudio()} />
+                <audio
+                  preload="auto"
+                  type="audio/mpeg"
+                  ref={audioRef}
+                  src={getRandomAudio()}
+                />
               )}
               {selectArrow === 1 && (
                 <img
@@ -556,7 +561,12 @@ const Circle = () => {
                 />
               )}
               {selectArrow === 2 && (
-                <audio preload="auto" ref={audioRef} src={getRandomAudio()} />
+                <audio
+                  preload="auto"
+                  type="audio/mpeg"
+                  ref={audioRef}
+                  src={getRandomAudio()}
+                />
               )}
 
               {selectArrow === 2 && <div />}
@@ -610,7 +620,12 @@ const Circle = () => {
               }}
             >
               {selectArrow === 3 && (
-                <audio preload="auto" ref={audioRef} src={getRandomAudio()} />
+                <audio
+                  preload="auto"
+                  type="audio/mpeg"
+                  ref={audioRef}
+                  src={getRandomAudio()}
+                />
               )}
 
               {selectArrow === 3 && (
@@ -623,7 +638,12 @@ const Circle = () => {
               )}
 
               {selectArrow === 4 && (
-                <audio preload="auto" ref={audioRef} src={getRandomAudio()} />
+                <audio
+                  preload="auto"
+                  type="audio/mpeg"
+                  ref={audioRef}
+                  src={getRandomAudio()}
+                />
               )}
 
               {selectArrow === 4 && <div />}

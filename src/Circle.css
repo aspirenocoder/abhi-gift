@@ -100,8 +100,8 @@
   transition: font-size 0.5s ease;
   position: relative;
   bottom: 70px;
-  background-color: blueviolet;
-  border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 10px;
 }
 
 blockquote {

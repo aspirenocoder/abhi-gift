@@ -520,7 +520,7 @@ const Circle = () => {
       >
         {pageIndex === 0 && (
           <div>
-            <p className="abi-text">Abhiram</p>
+            <p className="abi-text">Abhiram TVS</p>
             <div
               style={{
                 display: "flex",
@@ -638,7 +638,7 @@ const Circle = () => {
               <div>
                 <p className="selected-number">{highlightedDot}</p>
                 <p className="proceed-button" onClick={() => setPageIndex(1)}>
-                  Click to View
+                  View
                 </p>
               </div>
             )}
@@ -648,13 +648,12 @@ const Circle = () => {
           <div className="flipped-div">
             <img
               alt="profile"
-              style={{ width: "150px", height: "150px", borderRadius: "30px" }}
+              style={{ width: "250px", height: "250px", borderRadius: "30px" }}
               src={data[highlightedDot].image_url}
             />
             <p
               style={{
                 fontWeight: "700",
-                fontFamily: "cursive",
                 fontSize: "25px",
               }}
             >
@@ -675,7 +674,16 @@ const Circle = () => {
         )}
         {pageIndex === 2 && (
           <div className="metaphor-div">
-            <h1 style={{ textAlign: "center" }}> From my heart</h1>
+            <h1
+              style={{
+                textAlign: "center",
+                position: "relative",
+                bottom: "20px",
+              }}
+            >
+              {" "}
+              From my heart
+            </h1>
             <blockquote>
               <p>{data[highlightedDot].metaphor}</p>
             </blockquote>

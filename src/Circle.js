@@ -16,6 +16,11 @@ const Circle = () => {
   const numDots = 100;
   const dotSize = 3; // Size of the dot
   // const imageSize = 35;
+  const audioFiles = [Audio1, Audio2, Audio3, Audio4];
+  const getRandomAudio = () => {
+    const randomIndex = Math.floor(Math.random() * audioFiles.length);
+    return audioFiles[randomIndex];
+  };
   const [clickedHeart, setClickedHeart] = useState(HeartPNG);
   const [highlightedDot, setHighlightedDot] = useState(null);
   const circleRef = useRef(null);
@@ -317,7 +322,9 @@ const Circle = () => {
                 // backgroundColor: "#fff",
               }}
             >
-              {selectArrow === 1 && <audio ref={audioRef} src={Audio1} />}
+              {selectArrow === 1 && (
+                <audio ref={audioRef} src={getRandomAudio()} />
+              )}
               {selectArrow === 1 && (
                 <img
                   src={BottomLeftArrow}
@@ -334,7 +341,9 @@ const Circle = () => {
                   }}
                 />
               )}
-              {selectArrow === 2 && <audio ref={audioRef} src={Audio2} />}
+              {selectArrow === 2 && (
+                <audio ref={audioRef} src={getRandomAudio()} />
+              )}
 
               {selectArrow === 2 && <div />}
 
@@ -386,7 +395,9 @@ const Circle = () => {
                 top: "-70px",
               }}
             >
-              {selectArrow === 3 && <audio ref={audioRef} src={Audio3} />}
+              {selectArrow === 3 && (
+                <audio ref={audioRef} src={getRandomAudio()} />
+              )}
 
               {selectArrow === 3 && (
                 <img
@@ -397,7 +408,9 @@ const Circle = () => {
                 />
               )}
 
-              {selectArrow === 4 && <audio ref={audioRef} src={Audio4} />}
+              {selectArrow === 4 && (
+                <audio ref={audioRef} src={getRandomAudio()} />
+              )}
 
               {selectArrow === 4 && <div />}
 
@@ -453,10 +466,25 @@ const Circle = () => {
         {pageIndex === 2 && (
           <div className="metaphor-div">
             <h1 style={{ textAlign: "center" }}> Metaphor</h1>
+            <blockquote>
+              <p>
+                Abhiram created major impact in my life to grow in exponential
+              </p>
+            </blockquote>
+            <p
+              style={{
+                textAlign: "right",
+                position: "relative",
+                left: "-50px",
+                top: "-20px",
+              }}
+            >
+              -- Asha
+            </p>
             <div
               style={{
                 display: "flex",
-                width: "60vw",
+                width: "90vw",
                 alignItems: "center",
                 justifyContent: "space-evenly",
               }}

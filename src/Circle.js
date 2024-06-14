@@ -507,8 +507,8 @@ const Circle = () => {
         />
       )}
 
-      {pageIndex == 1 ||
-        (pageIndex == 2 && (
+      {pageIndex === 1 ||
+        (pageIndex === 2 && (
           <p style={{ fontSize: "30px" }}>A note to our darling!</p>
         ))}
 

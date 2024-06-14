@@ -8,6 +8,13 @@ import Audio2 from "./assets/audio2.mpeg";
 import Audio3 from "./assets/audio3.mpeg";
 import Audio4 from "./assets/audio4.mpeg";
 import Audio5 from "./assets/audio5.mpeg";
+import Audio6 from "./assets/audio6.mpeg";
+import Audio7 from "./assets/audio7.mpeg";
+import Audio8 from "./assets/audio8.mpeg";
+import Audio9 from "./assets/audio9.mpeg";
+import Audio10 from "./assets/audio10.mpeg";
+import Audio11 from "./assets/audio11.mpeg";
+
 import Cookies from "js-cookie";
 import HeartGIF from "./assets/heart.gif";
 import HeartPNG from "./assets/heart.png";
@@ -17,7 +24,19 @@ const Circle = () => {
   const numDots = 50;
   const dotSize = 3; // Size of the dot
   // const imageSize = 35;
-  const audioFiles = [Audio1, Audio2, Audio3, Audio4, Audio5];
+  const audioFiles = [
+    Audio1,
+    Audio2,
+    Audio3,
+    Audio4,
+    Audio5,
+    Audio6,
+    Audio7,
+    Audio8,
+    Audio9,
+    Audio10,
+    Audio11,
+  ];
   const getRandomAudio = () => {
     const randomIndex = Math.floor(Math.random() * audioFiles.length);
     return audioFiles[randomIndex];
